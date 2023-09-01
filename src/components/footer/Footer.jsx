@@ -7,7 +7,7 @@ function Footer() {
             <hr />
             <div className={style.content}>
                 <div className="footer-title">
-                    &copy; ETALON, PAO
+                    &copy; ETALON
                 </div>
                 <div className={style.adress}>
                     20300 ВУЛ. СТАРИЦЬКОГО, 5 ЧЕРКАСЬКА ОБЛАСТЬ,  УМАНЬ,  УКРАЇНА

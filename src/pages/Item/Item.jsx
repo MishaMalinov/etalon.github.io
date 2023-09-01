@@ -1,24 +1,18 @@
-import { Link } from 'react-router-dom';
-import style from './product.module.scss';
-
-function Product({title,price,img,id,setCurrent}){
+import data from '../../data/production.json';
+function Item(){
+    const globalId = window.location.href.match(/[0-9]+/g)[1];
+    const res = null;
     
+    const {img,title,price,id} = data[globalId];
     const image = require(`../../data/${img?img:'noimage.jpg'}`);
-    function handleProduct(){
-        setCurrent(
-            <div className="element">
-                {title}
-            </div>
-        )
-    }
-
+    sessionStorage.setItem('lastPage',`/product?id=${globalId}`)
     return(
-        <div className={style.product}>
-            <div className={style.img}>
+        <div >
+            <div >
                 {/* <img src="https://i.stack.imgur.com/CQsCU.jpg" alt="" style={{'width':'100px','height':'100px'}}/> */}
-                <Link onClick={handleProduct} to={`/product?id=${id}`} >
+                
                     <img src={image} alt={title} />
-                </Link>
+                
                 
             </div>
             <div className="title">{title}</div>
@@ -29,5 +23,4 @@ function Product({title,price,img,id,setCurrent}){
         </div>
     )
 }
-
-export default Product;
+export default Item;
