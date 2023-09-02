@@ -10,7 +10,8 @@ function Footer() {
                     &copy; ETALON
                 </div>
                 <div className={style.adress}>
-                    20300 ВУЛ. СТАРИЦЬКОГО, 5 ЧЕРКАСЬКА ОБЛАСТЬ,  УМАНЬ,  УКРАЇНА
+                    УКРАЇНА, ЧЕРКАСЬКА ОБЛАСТЬ, УМАНЬ, 20300, ВУЛ. СТАРИЦЬКОГО, 5
+
                 </div>
                 <div className={style.contact}>
                         <Link to="/contact">Контакти</Link>

@@ -1,22 +1,17 @@
 import { Link } from 'react-router-dom';
 import style from './product.module.scss';
 
-function Product({title,price,img,id,setCurrent}){
+function Product({title,price,img,id}){
     
     const image = require(`../../data/${img?img:'noimage.jpg'}`);
-    function handleProduct(){
-        setCurrent(
-            <div className="element">
-                {title}
-            </div>
-        )
+    function productHandler(){
+        sessionStorage.setItem('product',id);
     }
-
     return(
         <div className={style.product}>
             <div className={style.img}>
                 {/* <img src="https://i.stack.imgur.com/CQsCU.jpg" alt="" style={{'width':'100px','height':'100px'}}/> */}
-                <Link onClick={handleProduct} to={`/product?id=${id}`} >
+                <Link  to={`/product`} onClick={productHandler}>
                     <img src={image} alt={title} />
                 </Link>
                 
