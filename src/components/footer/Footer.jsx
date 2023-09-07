@@ -4,7 +4,7 @@ function Footer() {
 
     return (
         <div className={style.footer}>
-            <hr />
+            <div className={style.line}></div>
             <div className={style.content}>
                 <div className="footer-title">
                     &copy; ETALON

@@ -17,9 +17,11 @@ function Product({title,price,img,id}){
                 </Link>
                 
             </div>
-            <div className="title">{title}</div>
-            <div className="price">{price}</div>
-            <button className="btn btn-success">Buy</button>
+            <div className={style.title}>{title}</div>
+            <Link className={style['btn-link']} to={`/product`} onClick={productHandler}>
+                <div className={style.btn}>Детальніше</div>
+                
+            </Link>
             {/* <div className="description">{description}</div> */}
 
         </div>

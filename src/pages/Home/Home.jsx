@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {Routes,Route, useNavigate} from 'react-router-dom';
-
+import style from './home.module.scss'
 function Home(){
     const navigate = useNavigate();
     useEffect(()=>{
@@ -12,8 +12,11 @@ function Home(){
     
     
     return(
-        <div className="home">
-            <h1>Home</h1>
+        <div className={style.home}>
+            <div className={style.center}>
+                <h1>Головна</h1>
+            </div>
+            
         </div>
 
     )

@@ -10,7 +10,10 @@ function Contact(){
     }
     return(
         <div className={style.contact}>
+            <div className={style.center}>
+                
             <h1>Контактна інформація </h1>
+            <div className={style.line}></div>
             <div className={style.content}>
                 <div className={`${style.address} ${style.item}`}>
                     <div className={style['address-image']}>
@@ -72,6 +75,7 @@ function Contact(){
                     </div>
                     
                 </div>
+            </div>
             </div>
         </div>
     )
