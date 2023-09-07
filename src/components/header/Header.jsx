@@ -1,7 +1,22 @@
 import HeaderNav from "./HeaderNav";
 import style from './header.module.scss'
 import logo from '../../data/logo_white.svg';
+import toggleImage from '../../data/icons8-menu.svg';
+import { useEffect, useState } from "react";
 function Header(){
+    const [toggle,setToggle] = useState(window.innerWidth>768);
+    const [btn,setBtn] = useState('')
+    function toggleHandler(){
+
+        setToggle(!toggle)
+        
+    }
+    useEffect(()=>{
+        console.log(window.innerWidth)
+        console.log(toggle)
+        setBtn(window.innerWidth<768);
+       
+    })
     return(
         <div className={style.header}>
             <div  className={`${style.content} flex-column flex-md-row`}>
@@ -10,15 +25,19 @@ function Header(){
                     <div className={style.logo}>
                         <img className={style['logo-img']} src={logo} alt="Logo" />
                     </div>
+                    <button className={`${style.toggle}  d-md-none`}  onClick={toggleHandler}><img src={toggleImage}/></button>
+                    {/* <div className={`${style['title-name']} d-md-none`}><span >Еталон</span></div> */}
                     
-                    <div className={`${style['title-name']} d-md-none`}><span >Еталон</span></div>
                 </div>
-                <HeaderNav/>
+                {
+                    toggle&&<HeaderNav/>
+                }
+                
 
             </div>
 
             
-            <div className="topa" id="topa"></div>
+            <div id="topa"></div>
         </div>
     )
 }

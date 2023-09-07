@@ -2,12 +2,12 @@
 import { Link } from "react-router-dom";
 
 import { Navbar, Nav } from 'react-bootstrap';
-function HeaderNav() {
+function HeaderNav({toggle}) {
   function handlePage(string){
     sessionStorage.setItem('lastPage',string);
   }
   return (
-    <Navbar>
+    <Navbar className=" d-md-block"> 
         <Nav className="flex-column flex-md-row ">
           <Link to="/" onClick={()=>{handlePage("/")}}>Головна</Link>
           <Link to="/production" onClick={()=>{handlePage("/production")}}>Продукція</Link> 
