@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav } from 'react-bootstrap';
 function HeaderNav() {
   function handlePage(string){
-    sessionStorage.setItem('lastPage',string)
+    sessionStorage.setItem('lastPage',string);
   }
   return (
     <Navbar>

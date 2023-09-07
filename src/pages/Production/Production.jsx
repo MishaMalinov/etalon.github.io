@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react';
 function Production() {
         return (
 
-            <div className="production">
-                <h1 className="title">Каталог товарів</h1>
+            <div className={style.production}>
+                <h1 className={style.title}>Каталог товарів</h1>
                 <div className={style.content} >
                     {
                         data.map((item, index) => <Product  key={index} title={item.shortTitle} price={item.price} img={item.img} id={item.id} />)

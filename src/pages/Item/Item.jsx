@@ -9,9 +9,10 @@ function Item(){
     const image = require(`../../data/${img?img:'noimage.jpg'}`);
     sessionStorage.setItem('lastPage',`/product`);
     
+    // const des = new DOMParser().parseFromString(description, 'text/html');
     return(
-        <div className={style.content}>
-            <div className={`${style.top}`}>
+        <div className={style.content} >
+            <div className={`${style.top}`} >
                 <div className={style.image}>
                     <img src={image} alt={title} />
                 </div>
@@ -38,11 +39,7 @@ function Item(){
            
             <div className={style.bottom}>
                     <div className={style.label}>Опис товару</div>
-                    <div className={style.description}>
-                        {
-                            description
-                        }
-                    </div>
+                    <div className={style.description} dangerouslySetInnerHTML={{ __html:description }} />
             </div>
            
         </div>

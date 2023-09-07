@@ -1,0 +1,95 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 600px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.212);
+    margin: 10px;
+
+}
+
+.contact{
+    margin: 10px;
+    font-size: 22px;
+    h1{
+        font-size: 36px;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        .address{
+            
+            .address-image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                width: 200px;
+                img{
+                    height: 200px;
+                }
+            }
+            .address-content{
+                .address-title{
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+                .address-content{
+                    
+                }
+            }
+            
+            
+            
+        }
+        .numbers{
+            .numbers-image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                width: 200px;
+                img{
+                    height: 150px;
+                }
+            }
+            .numbers-content{
+                .numbers-title{
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+                .numbers-nums{
+                    div{
+                        &:hover .copyTip{
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            
+
+        }
+        .owner{
+            .owner-image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                width: 200px;
+                img{
+                    height: 150px;
+                }
+            }
+            .owner-content{
+                .owner-title{
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+                .owner-content{
+
+                }
+            }
+            
+        }
+    }
+}
