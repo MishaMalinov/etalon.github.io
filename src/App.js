@@ -3,16 +3,20 @@ import Header from "./components/header/Header";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Home from './pages/Home/Home'
-import {Routes,Route, useNavigate} from 'react-router-dom';
+import {Routes,Route} from 'react-router-dom';
 import Production from "./pages/Production/Production";
-import { useState } from "react";
 import Item from "./pages/Item/Item";
+import style from './assets/app.module.scss'
 function App() {
     
     return (
-      <div className="App">
-          <Header/>
+      <div className={style.App}>
+          <Header/> 
+          <div className={style.content} >
             <Routes>
+             
+
+              
               <Route path="/" element={<Home/>} />
               <Route path="/home" element={<Home/>} />
               <Route path="/contact" element={<Contact/>} />
@@ -26,6 +30,7 @@ function App() {
             </Routes>
   
           <Footer/>
+          </div>
   
       </div>
     );

@@ -5,7 +5,6 @@ import toggleImage from '../../data/icons8-menu.svg';
 import { useEffect, useState } from "react";
 function Header(){
     const [toggle,setToggle] = useState(window.innerWidth>768);
-    const [btn,setBtn] = useState('')
     function toggleHandler(){
 
         setToggle(!toggle)
@@ -14,7 +13,6 @@ function Header(){
     useEffect(()=>{
         console.log(window.innerWidth)
         console.log(toggle)
-        setBtn(window.innerWidth<768);
        
     })
     return(
@@ -25,19 +23,16 @@ function Header(){
                     <div className={style.logo}>
                         <img className={style['logo-img']} src={logo} alt="Logo" />
                     </div>
-                    <button className={`${style.toggle}  d-md-none`}  onClick={toggleHandler}><img src={toggleImage}/></button>
+                    <button className={`${style.toggle}  d-md-none`}  onClick={toggleHandler} ><img src={toggleImage} alt="toggle"/></button>
                     {/* <div className={`${style['title-name']} d-md-none`}><span >Еталон</span></div> */}
                     
                 </div>
                 {
-                    toggle&&<HeaderNav/>
+                    toggle&&<HeaderNav toggle={toggle} setToggle={setToggle}/>
                 }
                 
 
             </div>
-
-            
-            <div id="topa"></div>
         </div>
     )
 }

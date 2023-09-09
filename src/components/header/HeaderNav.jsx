@@ -2,17 +2,21 @@
 import { Link } from "react-router-dom";
 
 import { Navbar, Nav } from 'react-bootstrap';
-function HeaderNav({toggle}) {
+function HeaderNav({toggle,setToggle}) {
   function handlePage(string){
     sessionStorage.setItem('lastPage',string);
+    if(window.innerWidth<768){
+        setToggle(!toggle);
+    }
+    
   }
   return (
     <Navbar className=" d-md-block"> 
         <Nav className="flex-column flex-md-row ">
-          <Link to="/" onClick={()=>{handlePage("/")}}>Головна</Link>
-          <Link to="/production" onClick={()=>{handlePage("/production")}}>Продукція</Link> 
-          <Link to="/contact" onClick={()=>{handlePage("/contact")}}>Контакти</Link> 
-          <Link to="/about" onClick={()=>{handlePage("/about")}}>Про нас</Link>
+          <Link to="/#top" onClick={()=>{handlePage("/")}}>Головна</Link>
+          <Link to="/production#top" onClick={()=>{handlePage("/production")}}>Продукція</Link> 
+          <Link to="/contact#top" onClick={()=>{handlePage("/contact")}}>Контакти</Link> 
+          <Link to="/about#top" onClick={()=>{handlePage("/about")}}>Про нас</Link>
         </Nav>
     </Navbar>
   )

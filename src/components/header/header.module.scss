@@ -1,6 +1,8 @@
 .header{
     background-color: rgb(6, 170, 6);
     position: relative;
+    // opacity: 0.8;
+    // overflow: hidden;
     .content{
       display: flex;
       height: 100%;
@@ -34,7 +36,8 @@
           .toggle{
             
             background-color: rgb(6, 170, 6);
-            border: solid 2px black;
+            // border: solid 2px black;
+            border: none;
             border-radius: 10px;
             margin-right: 30px;
             img{
@@ -48,7 +51,9 @@
           min-height: 100%;
           padding: 0;
           position: relative;
-           
+          // opacity: 0.5;
+          background-color: rgb(6, 170, 6);
+          box-shadow: 0 8px 10px -6px #0000007e;
            div{
             width: 100%;
             a{
@@ -72,6 +77,7 @@
         }
         @media only screen and (min-width: 768px) {
            nav {
+            box-shadow: none;
             div{
               a{
                 padding-top:30px;
@@ -90,7 +96,17 @@
           }
         }
         
-  
+        
     }
-  
+    @media only screen and (max-width: 768px) {
+      position: fixed;
+      width: 100vw;
+      z-index: 2;
+      // &::after{
+      //   content: "";
+      //   display: block;
+      //   height: 100px;
+      //   width: 100vw;
+      // }
   }
+}

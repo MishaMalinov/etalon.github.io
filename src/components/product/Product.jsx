@@ -6,7 +6,7 @@ function Product({title,price,img,id}){
     const image = require(`../../data/${img?img:'noimage.jpg'}`);
     function productHandler(){
         sessionStorage.setItem('product',id);
-        window.location.href = '#topa'
+        window.location.href = '#top'
     }
     return(
         <div className={style.product}>

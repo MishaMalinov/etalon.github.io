@@ -8,6 +8,7 @@
 
     .body{
         width: 1200px;
+        position: relative;
         .title{
             font-size: 36px;
         }
@@ -21,6 +22,10 @@
             display: flex;
             flex-wrap: wrap;
             margin-top:50px;
+            @media only screen and (max-width: 768px) {
+                align-items: center;
+                flex-direction: column;
+            }
         }
     }
     
