@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 import { Navbar, Nav } from 'react-bootstrap';
-function HeaderNav({toggle,setToggle}) {
+function HeaderNav({toggle,setToggle }) {
   function handlePage(string){
     sessionStorage.setItem('lastPage',string);
     if(window.innerWidth<768){
