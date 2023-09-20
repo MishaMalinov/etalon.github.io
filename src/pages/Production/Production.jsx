@@ -1,13 +1,14 @@
 import style from './production.module.scss'
-import axios from 'axios';
 import Product from "../../components/product/Product";
 import data from '../../data/production.json'
-import { useEffect, useState } from 'react';
 function Production() {
+    sessionStorage.setItem('lastPage', `/production`);
+
         return (
 
             <div className={style.production}>
                 <div className={style.body}>
+                    
                     <h1 className={style.title}>Продукція</h1>
                     <div className={style.line}></div>
                     <div className={style.content} >

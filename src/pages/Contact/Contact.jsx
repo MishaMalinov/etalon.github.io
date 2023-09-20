@@ -3,6 +3,8 @@ import address from '../../data/address.svg'
 import telephone from '../../data/telephone.svg'
 import owner from '../../data/owner.svg'
 function Contact(){
+    sessionStorage.setItem('lastPage', `/contact`);
+
     function copyFunction(text){
         console.log(text);
         navigator.clipboard.writeText(text);

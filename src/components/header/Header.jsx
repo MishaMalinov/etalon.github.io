@@ -5,6 +5,8 @@ import toggleImage from '../../data/icons8-menu.svg';
 import { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
 function Header(){
+    const [opacity,setOpacity] = useState(1);
+    const [animation, setAnimation] = useState(false)
     function getWindowSize() {
         const {innerWidth, innerHeight} = window;
         return {innerWidth, innerHeight};
@@ -12,24 +14,41 @@ function Header(){
     const [windowSize, setWindowSize] = useState(getWindowSize());
     const [toggle,setToggle] = useState(false);
     function toggleHandler(){
-
-        setToggle(!toggle)
+        if(toggle){
+            setAnimation(true)
+            setTimeout(() => {
+                setToggle(!toggle)  
+            }, 150);
+        }else{
+            setAnimation(false)
+            setToggle(!toggle)  
+        }
+        
         
     }
+    
     useEffect(() => {
         function handleWindowResize() {
           setWindowSize(getWindowSize());
         }
     
         window.addEventListener('resize', handleWindowResize);
-    
         return () => {
+            
           window.removeEventListener('resize', handleWindowResize);
         };
       }, []);
+      function scrollHandler(){
+        if(window.scrollY>100){
+            setOpacity(0.93)
+        }else{
+            setOpacity(1);
+        }
+      }
+      window.addEventListener('scroll',scrollHandler);
     return(
-        <div className={style.header}>
-            <div  className={`${style.content} flex-column flex-md-row`}>
+        <div className={style.header} >
+            <div  className={`${style.content} flex-column flex-md-row`} style={{opacity:opacity}}>
                 
                 <div className={style.title}>
                     
@@ -41,7 +60,7 @@ function Header(){
                     
                 </div>
                 {
-                    windowSize.innerWidth>768?<HeaderNav  toggle={toggle} setToggle={setToggle}/>:toggle&&<HeaderNav  toggle={toggle} setToggle={setToggle}/>
+                    windowSize.innerWidth>768?<HeaderNav  toggle={toggle} setToggle={setToggle}/>:toggle&&<HeaderNav animation={animation} toggle={toggle} setToggle={setToggle}/>
                 }
                 
 

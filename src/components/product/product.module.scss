@@ -34,13 +34,15 @@
     }
     .btn-link{
         text-decoration: none;
-        border-radius: 30px;
+        border-radius: 20px;
+        position: relative;
+        top: 10px;
         .btn{
             background-color: rgb(6, 170, 6);
             color: white;
             height: 40px;
             width: 120px;
-            border-radius: 30px;
+            border-radius: 20px;
             border: solid 2px rgb(6, 170, 6);
             padding-top:4px ;
             text-align: center;

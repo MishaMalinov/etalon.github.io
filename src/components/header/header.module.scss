@@ -1,24 +1,31 @@
 .header{
-    background-color: rgb(6, 170, 6);
+    
     position: relative;
+    
     // opacity: 0.8;
     // overflow: hidden;
     .content{
       display: flex;
       height: 100%;
       position: relative;
+      transition-duration: 0.5s;
         .title{
+          background-color: rgb(6, 170, 6);
           display: flex;
           align-items: center;
           position: relative;
           height: 100px;
+          z-index: 1;
           .logo{
             height: 100px;
             min-width: 100px;
             
             .logo-img{
-              height: 100px;
-              width: 100px;
+              position: relative;
+              top: 10px;
+              left: 10px;
+              height: 80px;
+              width: 80px;
               object-fit: cover;
             }
           }
@@ -52,12 +59,15 @@
           padding: 0;
           position: relative;
           // opacity: 0.5;
+          animation-name: navbar;
+          animation-duration: 0.2s;
           background-color: rgb(6, 170, 6);
           box-shadow: 0 8px 10px -6px #0000007e;
+          
            div{
             width: 100%;
             a{
-              
+              transition-duration: 0.2s;
                 box-sizing: border-box;
                 position: relative;
                 text-decoration: none;
@@ -74,6 +84,10 @@
                 
             }
           }
+        }
+        .totop{
+          animation-name: totop;
+          animation-duration: 0.2s;
         }
         @media only screen and (min-width: 768px) {
            nav {
@@ -102,11 +116,25 @@
       position: fixed;
       width: 100vw;
       z-index: 2;
-      // &::after{
-      //   content: "";
-      //   display: block;
-      //   height: 100px;
-      //   width: 100vw;
-      // }
+      @keyframes navbar {
+        0%   {
+          bottom: 200px;
+          opacity: 0.5;
+        }
+        100% {
+          bottom: 0px;
+          opacity: 1;
+        }
+      }
+      @keyframes totop {
+        0%   {bottom:0px ;}
+        50% {opacity: 1;}
+        100% {bottom:200px ;
+              opacity: 0;
+        }
+      }
+  }
+    @media only screen and (min-width: 769px) {
+      background-color: rgb(6, 170, 6);
   }
 }
