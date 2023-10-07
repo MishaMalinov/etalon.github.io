@@ -42,9 +42,11 @@ function Email(){
         <div className={style.email}>
             <div className={style.center}>
                 
-                <h1 className={style.title}>
-                    Придбання товару
-                </h1>
+                <div className={style['title-box']}>
+                    <h1 className={style.title}>
+                        Придбання товару
+                    </h1>
+                </div>
                 <div className={style.line}></div>
                 
                 <form className={style.form} action="" ref={form} onSubmit={sendEmail}>

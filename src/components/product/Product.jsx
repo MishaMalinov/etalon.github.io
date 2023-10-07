@@ -3,7 +3,13 @@ import style from './product.module.scss';
 
 function Product({title,price,img,id}){
     
-    const image = require(`../../data/${img?img:'noimage.jpg'}`);
+    let image = `../../data/noimage.jpg`;
+    try{
+        image = require(`../../data/${img}/0.jpeg`);
+    }catch(e){
+        image =  `../../data/noimage.jpg`;
+    }
+    console.log(image)
     function productHandler(){
         sessionStorage.setItem('product',id);
         window.location.href = '#top'
