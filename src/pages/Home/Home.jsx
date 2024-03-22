@@ -38,15 +38,7 @@ function Home() {
                 <div className={style.line}></div>
                 <div className={style.content}>
                     <div className={style.top}>
-                        <div className={`${style.navigation} ${style.item}`}>
-                            <div className={style.title}>Навігація</div>
-                            <div className={style.links}>
-                                <Link to='/production'>Продукція</Link>
-                                <Link to='/contact'>Контакти</Link>
-                                <Link to='/about'>Про нас</Link>
-                            </div>
-
-                        </div>
+                        
                         <div className={`${style.description} ${style.item}`}>
                             <div className={style.title}>Еталон</div>
                             <div className={style.text}>
