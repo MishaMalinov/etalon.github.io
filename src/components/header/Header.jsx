@@ -26,7 +26,14 @@ function Header(){
         
         
     }
-    
+    function toggleOff(){
+        if(toggle){
+            setAnimation(true)
+            setTimeout(() => {
+                setToggle(false)  
+            }, 150);
+        }
+    }
     useEffect(() => {
         function handleWindowResize() {
           setWindowSize(getWindowSize());
@@ -47,15 +54,15 @@ function Header(){
       }
       window.addEventListener('scroll',scrollHandler);
     return(
-        <div className={style.header} >
-            <div  className={`${style.content} flex-column flex-md-row`} style={{opacity:opacity}}>
+        <div className={style.header}  onMouseOut={toggleOff}>
+            <div  className={`${style.content} flex-column flex-md-row`} style={{opacity:opacity}} >
                 
                 <div className={style.title}>
                     
                     <Link className={style.logo} to='/' onClick={()=>{sessionStorage.setItem('lastPage','/');setToggle(false)}}>
                         <img className={style['logo-img']} src={logo} alt="Logo" />
                     </Link>
-                    <button className={`${style.toggle}  d-md-none`}  onClick={toggleHandler} ><img src={toggleImage} alt="toggle"/></button>
+                    <button className={`${style.toggle}  d-md-none`}   onClick={toggleHandler} ><img src={toggleImage} alt="toggle"/></button>
                     
                     
                 </div>

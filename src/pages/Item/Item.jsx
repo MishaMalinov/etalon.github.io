@@ -40,7 +40,7 @@ function Item() {
     };
     const navigate=useNavigate();
     function handleEmail(){
-        sessionStorage.setItem('product', title)
+        sessionStorage.setItem('productBuy', title)
         navigate('/send')
     }
     

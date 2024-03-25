@@ -4,10 +4,12 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Home from './pages/Home/Home'
 import Email from "./pages/Email/Email";
+import Services from "./pages/Services/Services"
 import {Routes,Route} from 'react-router-dom';
 import Production from "./pages/Production/Production";
 import Item from "./pages/Item/Item";
 import style from './assets/app.module.scss'
+
 function App() {
   
     return (
@@ -22,6 +24,8 @@ function App() {
               <Route path="/home" element={<Home/>} />
               <Route path="/contact" element={<Contact/>} />
               <Route path="/production" element={<Production/>} />
+              <Route path="/services" element={<Services/>} />
+
               <Route path="/product" element={<Item/>} />
               <Route path="/send" element={<Email/>} />
 

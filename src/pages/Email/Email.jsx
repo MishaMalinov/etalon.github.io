@@ -70,7 +70,7 @@ function Email(){
                     <input type="text" 
                     name="product"
                     placeholder="Назва продукту*"
-                    value={sessionStorage.getItem('product')||""}
+                    value={sessionStorage.getItem('productBuy')||""}
                     readOnly
                     required
                     />
