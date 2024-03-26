@@ -1,0 +1,108 @@
+.production{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 10px;
+
+
+    .body{
+        width: 1200px;
+        position: relative;
+        .title{
+            font-size: 36px;
+        }
+        .line{
+            height: 2px;
+            width: 100%;
+            background-color: black;
+            margin-top: 20px ;
+        }
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top:50px;
+
+            .product{
+                height: 500px;
+                width: 370px;
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition-duration: 0.2s;
+                &:hover{
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.212);
+                }
+                .img{
+                    height: 300px;
+                    width: 370px;
+                    display: flex;
+                    align-items: flex-start;
+                    a{
+                        
+                        width: 100%;
+                        position: relative;
+            
+                        img{
+                            object-fit:cover ;
+                            width: 370px;
+                            height: 250px;
+            
+                        }
+                    }
+                    
+                }
+                .title{
+                    font-size: 26px;
+                    font-weight: 600;
+                }
+                .btn-link{
+                    text-decoration: none;
+                    border-radius: 10px;
+                    position: relative;
+                    top: 10px;
+                    // .btn{
+                    //     background-color: rgb(6, 170, 6);
+                    //     color: white;
+                    //     height: 40px;
+                    //     width: 120px;
+                    //     border-radius: 10px;
+            
+                    //     border: solid 2px rgb(6, 170, 6);
+                    //     padding-top:4px ;
+                    //     text-align: center;
+                    //     transition-duration: 0.3s;
+                    //     &:hover{
+                    //         color: rgb(4, 138, 4);
+                    //         background-color: #fff;
+                    //     }
+                    // }
+                }
+                @media only screen and (max-width: 768px) {
+                    height: 300px;
+                    width: 300px;
+                    box-shadow: 1px 1px 15px 3px rgba(0, 0, 0, 0.15);
+                    
+                    .img{
+                        height: 200px;
+                        width: 300px;
+                        a{
+                           img{
+                                width: 300px;
+                                height: 200px;
+                            } 
+                        }
+                        
+                    }
+                }
+            }
+
+
+            @media only screen and (max-width: 768px) {
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+    }
+    
+}

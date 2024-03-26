@@ -1,0 +1,99 @@
+.home {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+.home .center {
+  font-size: 22px;
+  width: 1200px;
+}
+.home .center .title {
+  font-size: 36px;
+}
+.home .center .line {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-top: 20px;
+}
+.home .center .content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.home .center .content .bottom {
+  margin-top: 50px;
+}
+.home .center .content .bottom .production .list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  max-width: 100%;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+.home .center .content .bottom .production .list a {
+  text-decoration: none;
+  color: black;
+}
+.home .center .content .bottom .production .list a .block {
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.322);
+  max-height: 340px;
+  white-space: normal;
+  box-sizing: content-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.home .center .content .bottom .production .list a .block .image {
+  width: min(18vw, 250px);
+  height: min(18vw, 250px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .center .content .bottom .production .list a .block div {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: min(calc(2vw), 22px);
+}
+.home .center .content .bottom .production .list a .block:hover {
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.622);
+}
+
+@media only screen and (max-width: 768px) {
+  .home .center .content .top {
+    flex-direction: column;
+  }
+  .home .center .content .top .navigation {
+    width: 100%;
+  }
+  .home .center .content .top .navigation .links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .center .content .top .navigation .links a {
+    width: 95%;
+    height: 50px;
+  }
+  .home .center .content .top .description {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .home .center .content .top .description .text {
+    font-size: 16px;
+  }
+  .home .center .content .bottom .production .list a .block {
+    margin-bottom: 10px;
+  }
+  .home .center .content .bottom .production .list a .block .image {
+    height: 150px;
+    width: 150px;
+  }
+  .home .center .content .bottom .production .list a .block div {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=home.css.map */

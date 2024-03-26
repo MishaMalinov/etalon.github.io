@@ -1,0 +1,83 @@
+.production {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+.production .body {
+  width: 1200px;
+  position: relative;
+}
+.production .body .title {
+  font-size: 36px;
+}
+.production .body .line {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-top: 20px;
+}
+.production .body .content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.production .body .content .product {
+  height: 500px;
+  width: 370px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.production .body .content .product:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.212);
+}
+.production .body .content .product .img {
+  height: 300px;
+  width: 370px;
+  display: flex;
+  align-items: flex-start;
+}
+.production .body .content .product .img a {
+  width: 100%;
+  position: relative;
+}
+.production .body .content .product .img a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 370px;
+  height: 250px;
+}
+.production .body .content .product .title {
+  font-size: 26px;
+  font-weight: 600;
+}
+.production .body .content .product .btn-link {
+  text-decoration: none;
+  border-radius: 10px;
+  position: relative;
+  top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .production .body .content .product {
+    height: 300px;
+    width: 300px;
+    box-shadow: 1px 1px 15px 3px rgba(0, 0, 0, 0.15);
+  }
+  .production .body .content .product .img {
+    height: 200px;
+    width: 300px;
+  }
+  .production .body .content .product .img a img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .production .body .content {
+    align-items: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=production.css.map */
