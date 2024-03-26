@@ -26,11 +26,8 @@
 
             
 
-            .bottom {
-                margin-top: 50px;
-
                 .production {
-                    
+                    display: block;
                     .list{
                         
                         display: flex;
@@ -55,15 +52,15 @@
                                 align-items: center;
                                 
                                 .image{
-                                    width:unquote("min(18vw, 250px)");
-                                    height:unquote("min(18vw, 250px)");
+                                    width:min(calc(18vw + 80px), 250px);
+                                    height:min(calc(18vw + 80px), 250px);
                                     object-fit: cover;
                                     
                                 }
                                 div{
                                     margin-top: 20px;
                                     margin-bottom: 10px;
-                                    font-size: unquote("min(calc(2vw), 22px)");
+                                    font-size: max(min(calc(3vw), 22px),14px);
                                 }
                                 transition-duration: 0.2s;
                                 &:hover{
@@ -74,7 +71,7 @@
                         }
                     }
                 }
-            }
+            
         }
     }
 }

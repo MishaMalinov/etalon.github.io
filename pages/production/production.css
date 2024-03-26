@@ -45,8 +45,7 @@
   position: relative;
 }
 .production .body .content .product .img a img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 370px;
   height: 250px;
 }

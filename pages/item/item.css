@@ -1,0 +1,11 @@
+.item {
+  margin-top: 50px;
+}
+.item .container .col .row .row-first img {
+  width: 100%;
+}
+.item .container .col .row .row-first .images img {
+  object-fit: cover;
+  height: 75px;
+  width: 75px;
+}/*# sourceMappingURL=item.css.map */

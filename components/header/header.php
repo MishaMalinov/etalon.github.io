@@ -26,7 +26,7 @@ if ($path == "localhost"){
         <div class="header">
             <nav class="navbar navbar-expand-md navbar-dark bg-success">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href=<?php echo $path."/"?>>Еталон</a>
+                    <a class="navbar-brand" href=<?php echo $path."/"?>><img style="height:50px;width:50px" src=<?php echo $path."/data/logo_white.svg"?> alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -42,7 +42,7 @@ if ($path == "localhost"){
                                 <a class="nav-link" href=<?php echo $path."/pages/production/production.php"?>>Продукція</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href=<?php echo $path."/pages/about/about.php"?>>Послуги</a>
+                                <a class="nav-link" href=<?php echo $path."/pages/services/services.php"?>>Послуги</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href=<?php echo $path."/pages/contact/contact.php"?>>Контакти</a>

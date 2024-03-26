@@ -1,0 +1,36 @@
+.services{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        padding: 10px;
+        .center {
+    
+            font-size: 22px;
+            width: 1200px;
+            .title{
+                font-size: 36px;
+            }
+            .line {
+                height: 2px;
+                width: 100%;
+                background-color: black;
+                margin-top: 20px;
+            }
+            .list{
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                .list-el{
+                    display: flex;
+                    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.158);
+                    margin-bottom: 25px;
+                    align-items: center;
+                    img{
+                        width: max(min(150px,10vw),80px);
+                        margin-right: 9%;
+                    }
+
+                }
+            }
+        }
+}
